@@ -1,3 +1,4 @@
+pwd
 if [ -d $1 ]; then
   echo 'error'
   exit
