@@ -1,0 +1,57 @@
+body{
+    color: white;
+    background:black;
+    margin:0;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.topNavBar{
+    padding: 20px 16px 20px 16px;
+}
+.topNavBar > nav{
+    padding-top: 7px; 
+}
+.topNavBar > nav > ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.topNavBar > nav > ul >li{
+    float: left;
+    margin-left: 17px;
+    margin-right: 17px;
+
+}
+.topNavBar > nav > ul > li >a{
+    font-size: 12px;
+    font-weight:bold;
+    color: #b7b7b7;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    display: block;
+    
+}
+.topNavBar > nav > ul > li >a:hover{
+    border-bottom: 3px solid #e06567;
+}
+.topNavBar .logo{
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Arial Black';
+    padding-top: 3px;
+    padding-bottom: 4px;
+
+}
+.topNavBar .logo .RS{
+    color: #e6686a;
+    margin-right: 4px;    
+}
+.topNavBar .logo .card{
+    color: #9a9da2;
+}
