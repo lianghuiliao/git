@@ -1,10 +1,26 @@
 *{margin: 0;padding:0;}
 a{text-decoration: none;}
+body{
+    background:gray url(wall-min.jpg) no-repeat center center;
+    background-size:cover; 
+
+}
 main{
     text-align:center;
 }
 #main1{
     display:inline-block;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 20px;
+}
+#main1>div:nth-child(2){
+    margin-left:-25px; 
+    margin-top: 20px;
+}
+#main1>div:nth-child(3){
+    margin-left:-80px; 
+    margin-top: 20px;
 }
 kbd{
     border:1px solid red;
@@ -15,17 +31,43 @@ kbd{
     position:relative;
 }
 kbd:hover>button{
-    display:inline-block;   
+    display:inline-block;       
 }
 kbd > button{
     position:absolute;
     right:0;
     bottom:0;
     display:none;
+    font-size: 10px;
 }
-#main1>div:nth-child(2){
-    margin-left:2em; 
+main> #main1>div>.key{
+    width:50px;
+    height:40px;
+    border-radius:7px;
+    background: linear-gradient(to bottom, #242424 0%,#060606 100%); 
+    color: #d2d3d2;
+    border:0.5px solid #343434;
+    box-shadow: 0px 0px 0px 1px #171818, 0 1px 0 1px #242424, 0 2px 0px 1px #0A0C0B;
+    margin: 0 8px;
+    font-size: 16px;
+    font-family: Helvetica;
 }
-#main1>div:nth-child(3){
-    margin-left:4em; 
+main{
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+kbd > span{
+    position: absolute;
+    top: 4px;
+    left:4px;
+}
+kbd > img{
+    position: absolute;
+    bottom: 2px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
 }
