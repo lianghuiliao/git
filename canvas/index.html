@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #canvas {
+            background: grey;
+            height: 100vh;
+            position: relative
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id='canvas'></div>
+</body>
+<script>
+    var div = document.getElementById('canvas')
+    document.onmousedown = function (a) {
+        var x = a.clientX
+        var y = a.clientY
+        var divA = document.createElement('div')
+        div.appendChild(divA)
+        divA.style = "width:6px;height:6px;" +
+            "background:white;border-radius:3px;" +
+            "position:absolute;left: " + (x - 3) +
+            "px;top: " + (y - 3) + "px;"
+
+    }
+    document.onmouseup = function (x) {
+        console.log(x)
+    }
+    document.onmousemove = function (x) {
+        console.log(1)
+    }
+</script>
+
+</html>
