@@ -6,8 +6,11 @@ ul,ol{
     list-style: none;
 }
 #canvas{
-    
+    background: white;
     display:block;
+    position: fixed;
+    top: 0;
+    left: 0;
     
 }
 .actions{
@@ -61,4 +64,22 @@ ul,ol{
     box-shadow: 0 0 3px rgba(0,0,0,0.95);
     transform: scale(1.2);
     
+ }
+ .sizes{
+     position: fixed;
+     top: 20px;
+     right: 20px;
+ }
+ .sizes > li{
+     margin: 20px 0;
+ }
+ .sizes > .thin{
+    height: 0;
+    width: 20px;
+    border-top: 2px solid black;
+ }
+ .sizes > .thick{
+     height: 0;
+     width: 20px;
+     border-top: 6px solid black;
  }
