@@ -8,11 +8,41 @@ listenToUser(canvas)
 var eraserEnabled = false;
 eraser.onclick = function () {
     eraserEnabled = true
-    actions.className = 'actions x'
+    eraser.classList.add('active')
+    pen.classList.remove('active')
 }
-pencil.onclick = function () {
+pen.onclick = function () {
     eraserEnabled = false
-    actions.className = 'actions'
+    pen.classList.add('active')
+    eraser.classList.remove('active')
+}
+black.onclick = function(){
+    context.strokeStyle = 'black'
+    black.classList.add('active')
+    yellow.classList.remove('active')
+    blue.classList.remove('active')
+    red.classList.remove('active')
+}
+red.onclick = function(){
+    context.strokeStyle = 'red'
+    red.classList.add('active')
+    yellow.classList.remove('active')
+    blue.classList.remove('active')
+    black.classList.remove('active')
+}
+yellow.onclick = function(){
+    context.strokeStyle = 'yellow'
+    yellow.classList.add('active')
+    red.classList.remove('active')
+    blue.classList.remove('active')
+    black.classList.remove('active')
+}
+blue.onclick = function(){
+    context.strokeStyle = 'blue'
+    blue.classList.add('active')
+    yellow.classList.remove('active')
+    red.classList.remove('active')
+    black.classList.remove('active')
 }
 /***********************************/
 
@@ -60,7 +90,7 @@ function listenToUser(canvas) {
             }
             else {
                 lastPoint = { x: x, y: y }
-                drawCircle(x, y, 1)
+               
             }
         }
         canvas.ontouchmove = function (aaa) {
@@ -90,8 +120,7 @@ function listenToUser(canvas) {
             }
             else {
                 lastPoint = { x: x, y: y }
-                drawCircle(x, y, 1)
-            }
+                
         }
         canvas.onmousemove = function (aaa) {
             var x = aaa.clientX
@@ -111,5 +140,6 @@ function listenToUser(canvas) {
         }
     }
 
+    }
 
 }
